@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Académie Football de Nantes — Recrutement de jeunes joueurs</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--turf:#123524;--turf2:#1b4a32;--chalk:#f1f4ec;--ink:#0d1f16;--card:#f5c518;--mute:#9db8a6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--chalk);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;line-height:.95;margin:0;letter-spacing:.01em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{background:var(--turf);color:var(--chalk)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font:900 1.5rem "Big Shoulders Display",Impact,sans-serif;text-decoration:none}
+.btn{display:inline-block;background:var(--card);color:var(--ink);font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none;border:0;font-size:1rem;cursor:pointer;font-family:inherit}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--card);outline-offset:2px}
+.hero{position:relative;overflow:hidden;padding:56px 0 88px}
+.hero svg{position:absolute;right:-90px;top:10px;width:min(620px,110%);opacity:.5;pointer-events:none}
+.hero svg *{fill:none;stroke:var(--chalk);stroke-width:2;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.4s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(3.4rem,13vw,7.5rem);font-weight:900;max-width:9ch}
+.hero p{max-width:34ch;font-size:1.15rem;color:#d5e3d9;margin:22px 0 28px}
+.strip{background:var(--card);padding:14px 0;font-weight:700}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:8px 32px}
+section{padding:64px 0}
+h2{font-size:clamp(2.2rem,7vw,3.6rem);font-weight:900;margin-bottom:12px}
+.lead{max-width:56ch;color:#35513f;margin:0 0 32px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border:2px solid var(--turf)}
+.cat{padding:22px;border-right:2px solid var(--turf);border-bottom:2px solid var(--turf);margin:0 -2px -2px 0}
+.cat h3{font-size:2.6rem;font-weight:900;color:var(--turf)}
+.cat b{display:block;margin-bottom:6px}
+.cat p{margin:0;font-size:.95rem;color:#35513f}
+.dark{background:var(--turf);color:var(--chalk)}
+.dark .lead{color:var(--mute)}
+ol{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+ol li{counter-increment:s;display:grid;grid-template-columns:64px 1fr;gap:12px;padding:20px 0;border-top:1px solid #3c6a50}
+ol li::before{content:counter(s);font:900 3rem/1 "Big Shoulders Display",Impact,sans-serif;color:var(--card)}
+ol li b{display:block;font-size:1.1rem}
+ol li span{color:#c4d8ca}
+.crit{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 40px}
+.crit div{border-left:6px solid var(--card);padding-left:16px}
+.crit b{display:block;font-size:1.1rem}
+form{background:#fff;border:2px solid var(--turf);padding:24px;display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.full{grid-column:1/-1}
+label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
+input,select,textarea{font:inherit;padding:11px 12px;border:2px solid #b9c9bd;border-radius:6px;background:var(--chalk);width:100%}
+textarea{min-height:96px;resize:vertical}
+.ok{display:none;background:var(--turf);color:var(--chalk);padding:28px;border-left:8px solid var(--card)}
+.ok h3{font-size:2.2rem;margin-bottom:8px}
+footer{background:var(--ink);color:var(--mute);padding:32px 0;font-size:.95rem}
+@media(max-width:600px){form{grid-template-columns:1fr}.hero svg{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.hero svg *{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap"><nav><a class="logo" href="#">ACADÉMIE FOOTBALL DE NANTES</a><a class="btn" href="#candidature">Postuler</a></nav></div>
+<div class="hero">
+<svg viewBox="0 0 600 400" aria-hidden="true"><rect x="10" y="10" width="580" height="380"/><line x1="300" y1="10" x2="300" y2="390"/><circle cx="300" cy="200" r="60"/><rect x="10" y="110" width="90" height="180"/><rect x="500" y="110" width="90" height="180"/></svg>
+<div class="wrap">
+<h1>Ton talent mérite d’être vu.</h1>
+<p>L’Académie football de Nantes recrute de jeunes footballeurs de 10 à 19 ans. Envoie ta candidature, passe les détections et rejoins notre centre de formation.</p>
+<a class="btn" href="#candidature">Envoyer ma candidature</a>
+</div></div>
+</header>
+<div class="strip"><div class="wrap"><span>Détections à Nantes toute l’année</span><span>Encadrement diplômé</span><span>Suivi scolaire</span></div></div>
+
+<section>
+<div class="wrap">
+<h2>Quelle catégorie ?</h2>
+<p class="lead">Tu es placé selon ton année de naissance. Chaque catégorie a son programme d’entraînement.</p>
+<div class="cats">
+<div class="cat"><h3>U13</h3><b>10 – 12 ans</b><p>Technique de base, plaisir du jeu, coordination.</p></div>
+<div class="cat"><h3>U15</h3><b>13 – 14 ans</b><p>Placement, jeu collectif, condition physique.</p></div>
+<div class="cat"><h3>U17</h3><b>15 – 16 ans</b><p>Tactique, compétition, préparation mentale.</p></div>
+<div class="cat"><h3>U19</h3><b>17 – 18 ans</b><p>Haut niveau, matchs officiels, passerelle vers les clubs.</p></div>
+</div></div>
+</section>
+
+<section class="dark">
+<div class="wrap">
+<h2>Du dossier au contrat</h2>
+<p class="lead">Le parcours de recrutement se déroule en quatre étapes.</p>
+<ol>
+<li><div><b>Candidature en ligne</b><span>Tu remplis le formulaire avec ton poste, ton club actuel et une vidéo si tu en as une.</span></div></li>
+<li><div><b>Étude du dossier</b><span>Nos recruteurs regardent ton profil et te répondent sous 7 jours.</span></div></li>
+<li><div><b>Journée de détection à Nantes</b><span>Exercices techniques, match à effectif réduit et entretien avec les entraîneurs.</span></div></li>
+<li><div><b>Décision et intégration</b><span>Les parents sont reçus pour l’inscription, le suivi scolaire et le programme.</span></div></li>
+</ol>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Ce que nous regardons</h2>
+<p class="lead">Le talent compte, mais pas seulement.</p>
+<div class="crit">
+<div><b>Technique</b>Contrôle, passe, dribble, frappe.</div>
+<div><b>Intelligence de jeu</b>Placement, vision, prise de décision.</div>
+<div><b>Physique</b>Vitesse, endurance, coordination.</div>
+<div><b>État d’esprit</b>Discipline, respect, envie de progresser.</div>
+</div></div>
+</section>
+
+<section id="candidature" style="background:#e3e9df">
+<div class="wrap">
+<h2>Postuler maintenant</h2>
+<p class="lead">Pour les mineurs, le formulaire est rempli avec un parent ou un tuteur.</p>
+<form id="f" name="candidature" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="candidature">
+<p style="display:none"><label>Ne pas remplir <input name="bot-field"></label></p>
+<label>Nom<input name="nom" required autocomplete="family-name"></label>
+<label>Prénom<input name="prenom" required autocomplete="given-name"></label>
+<label>Date de naissance<input type="date" name="naissance" required></label>
+<label>Poste
+<select name="poste" required><option value="">Choisir</option><option>Gardien</option><option>Défenseur</option><option>Milieu</option><option>Attaquant</option></select></label>
+<label>Pied fort<select name="pied"><option>Droit</option><option>Gauche</option><option>Les deux</option></select></label>
+<label>Club actuel<input name="club" placeholder="Aucun si tu n’as pas de club"></label>
+<label>Ville et pays<input name="ville" required></label>
+<label>Téléphone du parent ou tuteur (WhatsApp)<input type="tel" name="tel" required autocomplete="tel"></label>
+<label class="full">Lien vidéo (YouTube, TikTok, Drive)<input type="url" name="video" placeholder="https://"></label>
+<label class="full">Présente-toi en quelques lignes<textarea name="msg"></textarea></label>
+<div class="full"><button class="btn" type="submit">Envoyer ma candidature</button></div>
+</form>
+<p id="err" role="alert" style="display:none;color:#a11;font-weight:700;margin-top:12px">L’envoi a échoué. Vérifie ta connexion et réessaie.</p>
+<div class="ok" id="ok" role="status" tabindex="-1"><h3>Candidature reçue</h3><p id="okt"></p></div>
+</div>
+</section>
+
+<footer><div class="wrap">Académie football de Nantes — Centre de formation et de détection de jeunes joueurs. Contact : <a href="mailto:nantesacademie2@gmail.com">nantesacademie2@gmail.com</a></div></footer>
+
+<script>
+var form=document.getElementById('f');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(form),btn=form.querySelector('button');
+  btn.disabled=true;document.getElementById('err').style.display='none';
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()})
+  .then(function(r){if(!r.ok)throw new Error();
+    document.getElementById('okt').textContent='Merci '+d.get('prenom')+'. Notre équipe étudie ton dossier et contactera ton parent ou tuteur au '+d.get('tel')+' sous 7 jours.';
+    form.style.display='none';var ok=document.getElementById('ok');ok.style.display='block';ok.focus();ok.scrollIntoView({block:'center'});})
+  .catch(function(){btn.disabled=false;document.getElementById('err').style.display='block';});
+});
+</script>
+</body>
+</html>
