@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Admin — Académie Football de Nantes</title>
+<style>
+body{margin:0;font:16px/1.5 system-ui,sans-serif;background:#f1f4ec;color:#0d1f16}
+header{background:#123524;color:#f1f4ec;padding:16px 20px;font-weight:800}
+main{max-width:1100px;margin:0 auto;padding:20px}
+input,select,button{font:inherit;padding:10px 12px;border:2px solid #b9c9bd;border-radius:6px}
+button{background:#f5c518;border-color:#f5c518;font-weight:700;cursor:pointer}
+.bar{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.bar input{flex:1;min-width:180px}
+.wrapt{overflow-x:auto;background:#fff;border:2px solid #123524}
+table{border-collapse:collapse;width:100%;min-width:760px}th,td{padding:10px;text-align:left;border-bottom:1px solid #dde5df;vertical-align:top}
+th{background:#123524;color:#f1f4ec;position:sticky;top:0}
+#msg{color:#a11;font-weight:700}
+</style></head><body>
+<header>Admin — Candidatures</header>
+<main>
+<form id="login" class="bar"><input type="password" id="pw" placeholder="Mot de passe admin" autocomplete="current-password" required><button>Se connecter</button></form>
+<p id="msg"></p>
+<section id="panel" hidden>
+<p><b id="count">0</b> candidature(s)</p>
+<div class="bar"><input id="q" placeholder="Rechercher un nom, une ville, un poste…"><select id="poste"><option value="">Tous les postes</option><option>Gardien</option><option>Défenseur</option><option>Milieu</option><option>Attaquant</option></select><button id="csv" type="button">Exporter en CSV</button></div>
+<div class="wrapt"><table><thead><tr><th>Date</th><th>Nom</th><th>Naissance</th><th>Poste</th><th>Pied</th><th>Club</th><th>Ville</th><th>Téléphone</th><th>Vidéo</th><th>Message</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section></main>
+<script>
+var data=[],F=['date','nom','naissance','poste','pied','club','ville','tel','video','msg'];
+function fmt(d){return new Date(d).toLocaleString('fr-FR',{dateStyle:'short',timeStyle:'short'})}
+function render(){
+  var q=document.getElementById('q').value.toLowerCase(),p=document.getElementById('poste').value;
+  var list=data.filter(function(r){return (!p||r.poste===p)&&JSON.stringify(r).toLowerCase().indexOf(q)>-1});
+  do
